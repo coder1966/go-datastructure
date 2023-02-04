@@ -13,6 +13,8 @@ type DoubleLink interface {
 	InsertNodeBack(node *DoubleLinkNode)                  //
 	InsertNodeBeforeNode(dest, node *DoubleLinkNode) bool // dest 前面插入 node
 	InsertNodeAfterNode(dest, node *DoubleLinkNode) bool  // dest 后面插入 node
+	FindNode(dest *DoubleLinkNode) *DoubleLinkNode        // 查找节点
+	FindNodeByValue(value interface{}) *DoubleLinkNode    // 根据值查找节点
 	DeleteNode(node *DoubleLinkNode) bool                 //
 	DeleteAtIndex(index int) bool                         //
 	String() string                                       //
@@ -131,6 +133,35 @@ func (l *DoubleLinkList) InsertNodeAfterNode(dest, node *DoubleLinkNode) bool {
 	bak.next = node
 	l.length++
 	return true
+}
+func (l *DoubleLinkList) FindNode(dest *DoubleLinkNode) *DoubleLinkNode {
+	if dest == nil {
+		return nil
+	}
+	if l.head == nil {
+		return nil
+	}
+	bak := l.head
+	for bak.value != dest.value {
+		bak = bak.next
+		if bak == nil {
+			return nil
+		}
+	}
+
+	return bak
+}
+func (l *DoubleLinkList) FindNodeByValue(value interface{}) *DoubleLinkNode {
+	if value == nil {
+		return nil
+	}
+	if l.head == nil {
+		return nil
+	}
+
+	node := NewDoubleLinkNode(value)
+
+	return l.FindNode(node)
 }
 func (l *DoubleLinkList) DeleteNode(node *DoubleLinkNode) bool {
 	// 第1个节点的编号是1不是0，0是head不带有数据

@@ -1,6 +1,8 @@
 package main
 
-import "godatastructure/a008link"
+import (
+	"godatastructure/a012hashtable"
+)
 
 func main() {
 	// a001arraylist.DoArrayList()
@@ -31,7 +33,11 @@ func main() {
 	// a007set.DoSet()
 	// a008link.DoSingleLink()
 	// a008link.DoSingleLinkFindMiddle()
-	a008link.DoDoubleLink()
+	// a008link.DoDoubleLink()
+	// a009threadsafe.DoThreadUnsafe()
+	// a011heaptheadsafe.DoHeapSort()
+	// a011heaptheadsafe.DoPriorityQueue()
+	a012hashtable.DoHashTable()
 	// graph.DemoAdd()
 	// a102redblacktree.ReadBlackTreeMain()
 	// a103bbplustree.BBplusTreeMain()

@@ -29,6 +29,9 @@ func DoDoubleLink() {
 	link.InsertNodeBack(n5)
 	fmt.Println("link.String() : ", link.String())
 
+	fmt.Println("查找 FindNodeByValue 字符串2 : ", link.FindNodeByValue("2").String())
+	fmt.Println("查找 FindNodeByValue 数值2 : ", link.FindNodeByValue(2).String())
+
 	fmt.Println("GetLength() : ", link.GetLength())
 	fmt.Println("GetHead()   : ", link.GetHead())
 	fmt.Println("GetTail()   : ", link.GetTail())
