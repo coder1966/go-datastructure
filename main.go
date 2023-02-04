@@ -1,8 +1,6 @@
 package main
 
-import (
-	"godatastructure/a008link"
-)
+import "godatastructure/a008link"
 
 func main() {
 	// a001arraylist.DoArrayList()
@@ -34,4 +32,9 @@ func main() {
 	// a008link.DoSingleLink()
 	// a008link.DoSingleLinkFindMiddle()
 	a008link.DoDoubleLink()
+	// graph.DemoAdd()
+	// a102redblacktree.ReadBlackTreeMain()
+	// a103bbplustree.BBplusTreeMain()
+	// a104goset.GoSetMain()
+	// a105radixtree.RadixTreeMain()
 }
